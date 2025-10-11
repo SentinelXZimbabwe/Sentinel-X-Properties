@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sentinel-X Properties | Bulawayo Property Management & Sales</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+  <!-- Navbar -->
+  <header class="bg-white shadow fixed top-0 w-full z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-2xl font-bold text-blue-700">Sentinel-X Properties</h1>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#home" class="hover:text-blue-600 font-medium">Home</a>
+        <a href="#about" class="hover:text-blue-600 font-medium">About</a>
+        <a href="#contact" class="hover:text-blue-600 font-medium">Contact</a>
+      </nav>
+      <a href="#contact" class="bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800 font-semibold">List Property</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="pt-24 bg-gradient-to-br from-blue-50 to-white">
+    <div class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Verified Bulawayo Properties, Managed by <span class="text-blue-700">Sentinel-X</span>
+        </h2>
+        <p class="text-gray-700 mb-8 leading-relaxed">
+          Sentinel-X Properties connects verified property owners and buyers in Bulawayo through a transparent,
+          technology-driven management system. Every listing is authenticated, mandated, and signed
+          by the rightful owner — ensuring trust and accountability.
+        </p>
+        <a href="properties.html" class="bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800 font-semibold">
+          View Properties
+        </a>
+      </div>
+      <div class="hidden md:block">
+        <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?auto=format&fit=crop&w=900&q=80" 
+             alt="Modern property in Bulawayo" class="rounded-2xl shadow-lg w-full h-auto">
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold mb-6">About Sentinel-X Properties</h3>
+      <p class="text-gray-700 leading-relaxed mb-8">
+        Sentinel-X Properties is part of the Sentinel-X Systems ecosystem — built to revolutionize
+        how real estate is managed, sold, and verified across Bulawayo and beyond.
+        Our platform integrates secure digital mandates, real-time verification, and AI analytics
+        for a transparent and efficient property market.
+      </p>
+      <a href="#contact" class="bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800 font-semibold">
+        Partner With Us
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact / Submit Property Section -->
+  <section id="contact" class="py-20 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold mb-8">List or Enquire About a Property</h3>
+      <p class="text-gray-700 mb-8">
+        To list your property in Bulawayo, please ensure it is owner-mandated and signed.
+        Sentinel-X verifies each listing before it goes live.
+      </p>
+
+      <!-- FormSubmit form -->
+      <form action="https://formsubmit.co/sentinelxzw@gmail.com" method="POST" enctype="multipart/form-data" class="grid gap-6 bg-white rounded-2xl shadow p-8">
+        <!-- Hidden fields to customize email -->
+        <input type="hidden" name="_subject" value="New Property Submission - Sentinel-X Properties">
+        <input type="hidden" name="_template" value="table"> <!-- Sends a clean HTML table email -->
+        <input type="hidden" name="_autoresponse" value="Thank you for submitting your property! We will review it and get back to you soon.">
+        <input type="hidden" name="_captcha" value="false">
+
+        <input type="text" name="name" placeholder="Your Full Name" required class="border rounded-lg p-3 w-full">
+        <input type="email" name="email" placeholder="Email Address" required class="border rounded-lg p-3 w-full">
+        <input type="text" name="property" placeholder="Property Address or ID" required class="border rounded-lg p-3 w-full">
+        <textarea name="message" rows="4" placeholder="Message or Details" class="border rounded-lg p-3 w-full"></textarea>
+
+        <!-- Images Upload -->
+        <label class="text-left text-gray-700 font-medium">Upload Property Images (max 20)</label>
+        <input type="file" name="images" accept="image/*" multiple class="border rounded-lg p-3 w-full" id="images" required>
+
+        <button type="submit" class="bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800 font-semibold">
+          Submit
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-8">
+    <div class="max-w-6xl mx-auto text-center px-6">
+      <p class="mb-2 font-semibold">Sentinel-X Properties</p>
+      <p class="text-blue-200 text-sm">© 2025 Sentinel-X Systems. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Limit file uploads to max 20
+    document.getElementById('images').addEventListener('change', function() {
+      if (this.files.length > 20) {
+        alert('You can only upload a maximum of 20 images.');
+        this.value = ''; // reset input
+      }
+    });
+  </script>
+</body>
+</html>
