@@ -11,6 +11,9 @@
       font-family: 'Inter', sans-serif;
       scroll-behavior: smooth;
     }
+    input, textarea, select {
+      border: 1px solid #CBD5E1;
+    }
   </style>
 </head>
 
@@ -22,9 +25,9 @@
       <nav class="hidden md:flex space-x-6">
         <a href="#home" class="hover:text-blue-600 font-medium">Home</a>
         <a href="#about" class="hover:text-blue-600 font-medium">About</a>
-        <a href="#contact" class="hover:text-blue-600 font-medium">Contact</a>
+        <a href="#list" class="hover:text-blue-600 font-medium">List Property</a>
       </nav>
-      <a href="#contact" class="bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800 font-semibold">List Property</a>
+      <a href="#list" class="bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800 font-semibold">List Property</a>
     </div>
   </header>
 
@@ -40,8 +43,8 @@
           technology-driven management system. Every listing is authenticated, mandated, and signed
           by the rightful owner — ensuring trust and accountability.
         </p>
-        <a href="properties.html" class="bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800 font-semibold">
-          View Properties
+        <a href="#list" class="bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800 font-semibold">
+          List Your Property
         </a>
       </div>
       <div class="hidden md:block">
@@ -61,41 +64,85 @@
         Our platform integrates secure digital mandates, real-time verification, and AI analytics
         for a transparent and efficient property market.
       </p>
-      <a href="#contact" class="bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800 font-semibold">
+      <a href="#list" class="bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800 font-semibold">
         Partner With Us
       </a>
     </div>
   </section>
 
-  <!-- Contact / Submit Property Section -->
-  <section id="contact" class="py-20 bg-blue-50">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h3 class="text-3xl font-bold mb-8">List or Enquire About a Property</h3>
-      <p class="text-gray-700 mb-8">
-        To list your property in Bulawayo, please ensure it is owner-mandated and signed.
-        Sentinel-X verifies each listing before it goes live.
+  <!-- List Property Section -->
+  <section id="list" class="py-20 bg-blue-50">
+    <div class="max-w-5xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-8">List Your Property</h3>
+      <p class="text-center text-gray-700 mb-12">
+        Submit your property details, signed mandates, and ownership documents.  
+        Our Technical Team will verify all data before publication.
       </p>
 
-      <!-- FormSubmit form -->
-      <form action="https://formsubmit.co/sentinelxzw@gmail.com" method="POST" enctype="multipart/form-data" class="grid gap-6 bg-white rounded-2xl shadow p-8">
-        <!-- Hidden fields to customize email -->
+      <form action="https://formsubmit.co/sentinelxzw@gmail.com" method="POST" enctype="multipart/form-data" class="bg-white shadow-lg rounded-2xl p-8 grid gap-8">
+        <!-- Hidden FormSubmit Config -->
         <input type="hidden" name="_subject" value="New Property Submission - Sentinel-X Properties">
-        <input type="hidden" name="_template" value="table"> <!-- Sends a clean HTML table email -->
-        <input type="hidden" name="_autoresponse" value="Thank you for submitting your property! We will review it and get back to you soon.">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_autoresponse" value="Thank you for submitting your property to Sentinel-X Properties. Our technical team will verify your documents and contact you shortly.">
         <input type="hidden" name="_captcha" value="false">
 
-        <input type="text" name="name" placeholder="Your Full Name" required class="border rounded-lg p-3 w-full">
-        <input type="email" name="email" placeholder="Email Address" required class="border rounded-lg p-3 w-full">
-        <input type="text" name="property" placeholder="Property Address or ID" required class="border rounded-lg p-3 w-full">
-        <textarea name="message" rows="4" placeholder="Message or Details" class="border rounded-lg p-3 w-full"></textarea>
+        <!-- Section 1: Property Data -->
+        <div>
+          <h4 class="text-xl font-semibold mb-4 text-blue-700">1️⃣ Property Details</h4>
+          <div class="grid md:grid-cols-2 gap-4">
+            <input type="text" name="Property ID / Address" placeholder="Property ID / Address" required class="p-3 rounded-lg w-full">
+            <input type="text" name="Property Title" placeholder="Property Title" required class="p-3 rounded-lg w-full">
+            <select name="Property Type" required class="p-3 rounded-lg w-full">
+              <option value="">Select Property Type</option>
+              <option>House</option><option>Apartment</option><option>Land</option>
+              <option>Commercial Building</option><option>Industrial Property</option><option>Other</option>
+            </select>
+            <input type="text" name="Location" placeholder="Location (e.g. Bulawayo CBD)" required class="p-3 rounded-lg w-full">
+            <input type="number" name="Price (USD)" placeholder="Price (USD)" step="100" required class="p-3 rounded-lg w-full">
+            <input type="text" name="Size" placeholder="Size (e.g. 500 sqm)" class="p-3 rounded-lg w-full">
+          </div>
+          <textarea name="Description" rows="4" placeholder="Detailed Property Description" required class="p-3 rounded-lg w-full mt-4"></textarea>
+        </div>
 
-        <!-- Images Upload -->
-        <label class="text-left text-gray-700 font-medium">Upload Property Images (max 20)</label>
-        <input type="file" name="images" accept="image/*" multiple class="border rounded-lg p-3 w-full" id="images" required>
+        <!-- Section 2: Owner Details -->
+        <div>
+          <h4 class="text-xl font-semibold mb-4 text-blue-700">2️⃣ Owner & Mandate Details</h4>
+          <div class="grid md:grid-cols-2 gap-4">
+            <input type="text" name="Owner Full Name" placeholder="Owner Full Name" required class="p-3 rounded-lg w-full">
+            <input type="text" name="Owner Contact" placeholder="Owner Contact (Phone or Email)" required class="p-3 rounded-lg w-full">
+            <input type="text" name="Contract / Mandate Number" placeholder="Contract / Mandate Number" required class="p-3 rounded-lg w-full">
+          </div>
+          <label class="block mt-4 font-medium text-gray-700">Upload Signed Mandate / Contract</label>
+          <input type="file" name="Mandate File" accept=".pdf,.jpg,.jpeg,.png" required class="p-3 rounded-lg w-full">
+        </div>
 
-        <button type="submit" class="bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800 font-semibold">
-          Submit
-        </button>
+        <!-- Section 3: Owner Verification -->
+        <div>
+          <h4 class="text-xl font-semibold mb-4 text-blue-700">3️⃣ Owner Personal Details & Verification</h4>
+          <div class="grid md:grid-cols-2 gap-4">
+            <input type="text" name="National ID / Passport Number" placeholder="National ID / Passport Number" required class="p-3 rounded-lg w-full">
+            <input type="text" name="Owner Residential Address" placeholder="Residential Address" required class="p-3 rounded-lg w-full">
+          </div>
+          <label class="block mt-4 font-medium text-gray-700">Proof of Ownership (Title Deed / Affidavit)</label>
+          <input type="file" name="Proof of Ownership" accept=".pdf,.jpg,.jpeg,.png" required class="p-3 rounded-lg w-full">
+
+          <label class="block mt-4 font-medium text-gray-700">Upload Owner ID Copy</label>
+          <input type="file" name="Owner ID Copy" accept=".pdf,.jpg,.jpeg,.png" required class="p-3 rounded-lg w-full">
+        </div>
+
+        <!-- Section 4: Images -->
+        <div>
+          <h4 class="text-xl font-semibold mb-4 text-blue-700">4️⃣ Property Images</h4>
+          <input type="file" name="Property Images" accept="image/*" multiple required class="p-3 rounded-lg w-full" id="images">
+          <p class="text-sm text-gray-500 mt-2">Upload up to 20 images showing all key areas of the property.</p>
+        </div>
+
+        <!-- Submit -->
+        <div class="text-center">
+          <button type="submit" class="bg-blue-700 text-white px-8 py-3 rounded-lg hover:bg-blue-800 font-semibold text-lg">
+            ✅ Submit Property for Verification
+          </button>
+        </div>
       </form>
     </div>
   </section>
@@ -113,7 +160,7 @@
     document.getElementById('images').addEventListener('change', function() {
       if (this.files.length > 20) {
         alert('You can only upload a maximum of 20 images.');
-        this.value = ''; // reset input
+        this.value = '';
       }
     });
   </script>
