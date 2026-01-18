@@ -1,0 +1,132 @@
+[
+  {
+    "id": 1,
+    "title": "4 Bedroom House – Hillside",
+    "listingType": "For Sale",
+    "category": "Low Density Residential",
+    "location": "Hillside, Bulawayo",
+    "price": "$120,000",
+    "description": "Well-maintained 4 bedroom house with fitted kitchen, borehole, garage and walled yard.",
+    "images": [
+      "property-data/hillside1.jpg",
+      "property-data/hillside2.jpg",
+      "property-data/hillside3.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "2 Bedroom Flat – CBD",
+    "listingType": "For Rental",
+    "category": "High Density Residential",
+    "location": "Bulawayo CBD",
+    "price": "$450 / month",
+    "description": "Modern flat close to offices and amenities. Secure building with parking.",
+    "images": [
+      "property-data/cbd1.jpg",
+      "property-data/cbd2.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "3 Bedroom House – Burnside",
+    "listingType": "For Sale",
+    "category": "Low Density Residential",
+    "location": "Burnside, Bulawayo",
+    "price": "$150,000",
+    "description": "Spacious family home on large land with borehole, swimming pool and staff quarters.",
+    "images": [
+      "property-data/burnside1.jpg",
+      "property-data/burnside2.jpg",
+      "property-data/burnside3.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "1 Bedroom Cottage – Khumalo",
+    "listingType": "For Rental",
+    "category": "Medium Density Residential",
+    "location": "Khumalo, Bulawayo",
+    "price": "$300 / month",
+    "description": "Neat cottage suitable for a single professional or couple. Quiet neighborhood.",
+    "images": [
+      "property-data/khumalo1.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Commercial Offices – Belmont",
+    "listingType": "For Sale",
+    "category": "Commercial Property",
+    "location": "Belmont, Bulawayo",
+    "price": "$280,000",
+    "description": "Industrial and office complex with warehouse space and secure parking.",
+    "images": [
+      "property-data/belmont1.jpg",
+      "property-data/belmont2.jpg"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "3 Bedroom House – Pumula South",
+    "listingType": "For Sale",
+    "category": "High Density Residential",
+    "location": "Pumula South, Bulawayo",
+    "price": "$55,000",
+    "description": "Solid 3 bedroom house with lounge, kitchen and durawall fencing.",
+    "images": [
+      "property-data/pumula1.jpg",
+      "property-data/pumula2.jpg"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "2 Bedroom Flat – Famona",
+    "listingType": "For Rental",
+    "category": "Medium Density Residential",
+    "location": "Famona, Bulawayo",
+    "price": "$500 / month",
+    "description": "Secure flat in a gated complex with parking and 24-hour security.",
+    "images": [
+      "property-data/famona1.jpg",
+      "property-data/famona2.jpg"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Residential Stand – Richmond",
+    "listingType": "For Sale",
+    "category": "Stand",
+    "location": "Richmond, Bulawayo",
+    "price": "$40,000",
+    "description": "Fully serviced residential stand ready for title. Ideal for immediate development.",
+    "images": [
+      "property-data/richmond1.jpg"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Warehouse – Kelvin Industrial",
+    "listingType": "For Rental",
+    "category": "Commercial Property",
+    "location": "Kelvin Industrial Area, Bulawayo",
+    "price": "$2,000 / month",
+    "description": "Large warehouse with loading bays, offices and secure yard.",
+    "images": [
+      "property-data/kelvin1.jpg",
+      "property-data/kelvin2.jpg"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "3 Bedroom House – Cowdray Park",
+    "listingType": "For Sale",
+    "category": "High Density Residential",
+    "location": "Cowdray Park, Bulawayo",
+    "price": "$48,000",
+    "description": "Recently built house with modern finishes, walled and gated.",
+    "images": [
+      "property-data/cowdray1.jpg",
+      "property-data/cowdray2.jpg"
+    ]
+  }
+]
